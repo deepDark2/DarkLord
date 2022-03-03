@@ -1,0 +1,21 @@
+{% load static %}
+<style>
+    section > h3 > img{
+        width:50px;
+    }
+</style>
+
+<section>
+    <h1>Cart Item List</h1>
+    {% for o in objs %}
+    <h3><img src="/static/img/{{o.itemid.imgname}}">
+        {{o.itemid.name}} ${{o.itemid.price}} 갯수 : {{o.num}} 구매자명 : {{o.custid.name}}</h3>
+    {% endfor %}
+</section>
+
+
+
+
+
+
+

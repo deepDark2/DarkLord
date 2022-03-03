@@ -1,0 +1,11 @@
+<section>
+    <h1>LOGIN</h1>
+    <form action="loginimpl" method="post">
+        {% csrf_token %}
+        <table><tbody>
+        <tr><td>ID</td><td><input type="text" name="id"></td><tr>
+        <tr><td>PWD</td><td><input type="password" name="pwd"></td><tr>
+        </tbody></table>
+        <input type="submit" value="LOGIN">
+    </form>
+</section>
