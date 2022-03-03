@@ -1,0 +1,25 @@
+<script>
+$(document).ready(function(){
+    $('section > #add_cart').click(function(){
+        num = $('section > input[name="num"]').val();
+        //alert(num+' '+{{objs.id}}+' '+'{{request.session.sessionid}}');
+        var c = confirm('CART에 넣겠습니까?');
+        if(c == true){
+            location.href='/cart/i/'+num+'/'+{{objs.id}}+'/'+'{{request.session.sessionid}}';
+        };
+    });
+});
+<!-- 4번 라인에 .val() : 값을 가져오기-->
+</script>
+<section>
+    <h1>Item Detail</h1>
+    <img src="/static/img/{{objs.imgname}}">
+    <h3>ID: {{objs.id}}</h3>
+    <h3>NAME: {{objs.name}}</h3>
+    <h3>PRICE: ${{objs.price}}</h3>
+    <h3>DATE: {{objs.regdate}}</h3>
+    <input type="number" name="num">
+    <a href="#" id="add_cart">ADD CART</a>
+    <a href="/item/d/{{objs.id}}">DELETE</a>
+    <a href="/item/uv/{{objs.id}}">UPDATE</a>
+</section>
