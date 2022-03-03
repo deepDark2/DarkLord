@@ -3,6 +3,7 @@ import itemDB
 def start():
     print('Start App');
     while True:
+        print('프로그램을 실행합니다.')
         cmd = input('Input CMD(q,i,s,so,u,d,ch)');
 
         if cmd == 'q':
