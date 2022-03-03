@@ -6,6 +6,7 @@ def start():
         cmd = input('Input CMD(q,i,s,so,u,d,ch)');
 
         if cmd == 'q':
+            print('프로그램을 종료합니다.')
             break;
         elif cmd == 'i':
             try:
