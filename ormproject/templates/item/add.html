@@ -2,9 +2,11 @@
     <h1>Item Add</h1>
     <form action="/item/i" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        NAME<input type="text" name="name"><br>
-        PRICE<input type="number" name="price"><br>
-        IMG<input type="file" name="img"><br>
+        <table>
+            <tr><td>NAME</td><td><input type="text" name="name"></td></tr>
+            <tr><td>PRICE</td><td><input type="number" name="price"></td></tr>
+            <tr><td>IMG</td><td><input type="file" name="img"></td></tr>
+        </table>
         <input type="submit" value="ADD">
     </form>
 </section>
